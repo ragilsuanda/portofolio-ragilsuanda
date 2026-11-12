@@ -1,0 +1,341 @@
+/* ════════════════════════════════════════════
+   SECTION CONTACT — full width, tema biru
+════════════════════════════════════════════ */
+.Contact {
+  position: relative;
+  z-index: 12;
+  background: #1B2CC1;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Grid dot background */
+.Contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Accent bar lime di atas */
+.Contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #C8F31D;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.Contact-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.Contact-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+  padding: 6rem clamp(2rem, 8vw, 8rem);
+}
+
+/* ── Kiri: info ── */
+.Contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Contact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.75);
+}
+
+.Contact-star {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #C8F31D;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  flex-shrink: 0;
+}
+
+.Contact-title {
+  margin: 0;
+  font-family: 'Bagel Fat One', cursive;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.Contact-title span {
+  color: #C8F31D;
+}
+
+.Contact-desc {
+  margin: 0;
+  max-width: 42ch;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+/* Daftar kontak */
+.Contact-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+.Contact-list li:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.Contact-list-key {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #C8F31D;
+  text-transform: uppercase;
+}
+
+.Contact-list a,
+.Contact-list li > span:last-child {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  word-break: break-word;
+}
+
+.Contact-list a:hover {
+  color: #C8F31D;
+}
+
+/* Sosial link */
+.Contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.Contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.Contact-socials a:hover {
+  background: #C8F31D;
+  border-color: #C8F31D;
+  color: #1B2CC1;
+}
+
+/* ── Kanan: form ── */
+.Contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.Contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.Contact-field label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+}
+
+.Contact-field input,
+.Contact-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  color: #ffffff;
+  background: rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.Contact-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.Contact-field input::placeholder,
+.Contact-field textarea::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.Contact-field input:focus,
+.Contact-field textarea:focus {
+  border-color: #C8F31D;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 0 3px rgba(200,243,29,0.18);
+}
+
+.Contact-field .has-error {
+  border-color: #ff6b6b;
+}
+
+.Contact-field small {
+  color: #ffaaaa;
+  font-size: 0.78rem;
+}
+
+/* Chips layanan */
+.Contact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.Contact-chip {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.Contact-chip:hover {
+  border-color: #C8F31D;
+  color: #ffffff;
+}
+
+.Contact-chip.is-active {
+  background: #C8F31D;
+  border-color: #C8F31D;
+  color: #1B2CC1;
+  font-weight: 700;
+}
+
+/* Tombol kirim */
+.Contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #1B2CC1;
+  background: #C8F31D;
+  border: none;
+  border-radius: 14px;
+  padding: 0.7rem 0.7rem 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.Contact-submit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #1B2CC1;
+  color: #C8F31D;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.Contact-submit:hover {
+  background: #d4ff20;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(200,243,29,0.25);
+}
+
+.Contact-submit:hover .Contact-submit-icon {
+  transform: rotate(45deg);
+}
+
+.Contact-submit:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.Contact-success {
+  margin: 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(200,243,29,0.14);
+  border: 1px solid rgba(200,243,29,0.45);
+  color: #C8F31D;
+  font-size: 0.88rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .Contact-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 4rem clamp(1.5rem, 5vw, 4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .Contact-container {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+  .Contact-form {
+    padding: 1.25rem;
+  }
+  .Contact-submit {
+    width: 100%;
+  }
+}

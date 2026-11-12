@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Background gradient utama -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f6ff;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8f0fe;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Cahaya biru kanan atas -->
+    <radialGradient id="glowTopRight" cx="90%" cy="10%" r="40%">
+      <stop offset="0%" style="stop-color:#a8c8ff;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Cahaya biru kiri bawah -->
+    <radialGradient id="glowBottomLeft" cx="10%" cy="90%" r="40%">
+      <stop offset="0%" style="stop-color:#b8d4ff;stop-opacity:0.30"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Soft glow tengah -->
+    <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Filter blur untuk wave -->
+    <filter id="blurWave" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <!-- Filter glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Glow kanan atas -->
+  <rect width="1920" height="1080" fill="url(#glowTopRight)"/>
+
+  <!-- Glow kiri bawah -->
+  <rect width="1920" height="1080" fill="url(#glowBottomLeft)"/>
+
+  <!-- ═══ GELOMBANG KANAN ATAS ═══ -->
+  <path d="M1600 -80 C1680 20, 1920 80, 1920 200 L1920 0 Z"
+        fill="#c5deff" opacity="0.45" filter="url(#blurWave)"/>
+  <path d="M1700 -60 C1820 60, 1920 140, 1920 280 L1920 0 Z"
+        fill="#a8c8ff" opacity="0.38"/>
+  <path d="M1500 0 Q1700 -40 1920 120 Q1820 200 1680 160 Q1580 100 1500 0 Z"
+        fill="#daeaff" opacity="0.55" filter="url(#blurWave)"/>
+  <path d="M1750 0 Q1860 40 1920 180 L1920 80 Q1880 0 1750 0 Z"
+        fill="#b8d4ff" opacity="0.35"/>
+  <path d="M1450 0 Q1680 -20 1920 160" stroke="#7ab5f5" stroke-width="2"
+        fill="none" opacity="0.40"/>
+  <path d="M1550 0 Q1760 20 1920 220" stroke="#7ab5f5" stroke-width="1.5"
+        fill="none" opacity="0.30"/>
+  <path d="M1650 0 Q1820 50 1920 280" stroke="#a8c8ff" stroke-width="1.5"
+        fill="none" opacity="0.25"/>
+
+  <!-- ═══ GELOMBANG KIRI BAWAH ═══ -->
+  <path d="M-80 900 C20 1000, 80 1080, 300 1080 L0 1080 Z"
+        fill="#c5deff" opacity="0.45" filter="url(#blurWave)"/>
+  <path d="M0 800 Q-40 950 200 1080 L0 1080 Z"
+        fill="#a8c8ff" opacity="0.38"/>
+  <path d="M0 860 Q120 980 320 1080 Q200 1080 80 1040 Q0 980 0 860 Z"
+        fill="#daeaff" opacity="0.55" filter="url(#blurWave)"/>
+  <path d="M0 920 Q80 1020 240 1080 L0 1080 Z"
+        fill="#b8d4ff" opacity="0.35"/>
+  <path d="M0 720 Q80 880 280 1080" stroke="#7ab5f5" stroke-width="2"
+        fill="none" opacity="0.40"/>
+  <path d="M0 800 Q120 940 360 1080" stroke="#7ab5f5" stroke-width="1.5"
+        fill="none" opacity="0.30"/>
+  <path d="M0 880 Q160 1000 420 1080" stroke="#a8c8ff" stroke-width="1.5"
+        fill="none" opacity="0.25"/>
+
+  <!-- ═══ POLA TITIK-TITIK KANAN ATAS ═══ -->
+  <!-- Grid titik kanan atas -->
+  <g opacity="0.22" fill="#6ba3e8">
+    <!-- Row 1 -->
+    <circle cx="1620" cy="40" r="2.2"/><circle cx="1650" cy="40" r="2.2"/>
+    <circle cx="1680" cy="40" r="2.2"/><circle cx="1710" cy="40" r="2.2"/>
+    <circle cx="1740" cy="40" r="2.2"/><circle cx="1770" cy="40" r="2.2"/>
+    <circle cx="1800" cy="40" r="2.2"/><circle cx="1830" cy="40" r="2.2"/>
+    <!-- Row 2 -->
+    <circle cx="1620" cy="70" r="2.2"/><circle cx="1650" cy="70" r="2.2"/>
+    <circle cx="1680" cy="70" r="2.2"/><circle cx="1710" cy="70" r="2.2"/>
+    <circle cx="1740" cy="70" r="2.2"/><circle cx="1770" cy="70" r="2.2"/>
+    <circle cx="1800" cy="70" r="2.2"/><circle cx="1830" cy="70" r="2.2"/>
+    <!-- Row 3 -->
+    <circle cx="1620" cy="100" r="2.2"/><circle cx="1650" cy="100" r="2.2"/>
+    <circle cx="1680" cy="100" r="2.2"/><circle cx="1710" cy="100" r="2.2"/>
+    <circle cx="1740" cy="100" r="2.2"/><circle cx="1770" cy="100" r="2.2"/>
+    <circle cx="1800" cy="100" r="2.2"/>
+    <!-- Row 4 -->
+    <circle cx="1650" cy="130" r="2.2"/><circle cx="1680" cy="130" r="2.2"/>
+    <circle cx="1710" cy="130" r="2.2"/><circle cx="1740" cy="130" r="2.2"/>
+    <circle cx="1770" cy="130" r="2.2"/>
+    <!-- Row 5 -->
+    <circle cx="1680" cy="160" r="2.2"/><circle cx="1710" cy="160" r="2.2"/>
+    <circle cx="1740" cy="160" r="2.2"/>
+  </g>
+
+  <!-- ═══ POLA TITIK-TITIK KIRI BAWAH ═══ -->
+  <g opacity="0.22" fill="#6ba3e8">
+    <circle cx="90" cy="920" r="2.2"/><circle cx="120" cy="920" r="2.2"/>
+    <circle cx="150" cy="920" r="2.2"/><circle cx="180" cy="920" r="2.2"/>
+    <circle cx="210" cy="920" r="2.2"/><circle cx="240" cy="920" r="2.2"/>
+    <circle cx="90" cy="950" r="2.2"/><circle cx="120" cy="950" r="2.2"/>
+    <circle cx="150" cy="950" r="2.2"/><circle cx="180" cy="950" r="2.2"/>
+    <circle cx="210" cy="950" r="2.2"/><circle cx="240" cy="950" r="2.2"/>
+    <circle cx="90" cy="980" r="2.2"/><circle cx="120" cy="980" r="2.2"/>
+    <circle cx="150" cy="980" r="2.2"/><circle cx="180" cy="980" r="2.2"/>
+    <circle cx="210" cy="980" r="2.2"/>
+    <circle cx="120" cy="1010" r="2.2"/><circle cx="150" cy="1010" r="2.2"/>
+    <circle cx="180" cy="1010" r="2.2"/>
+    <circle cx="150" cy="1040" r="2.2"/>
+  </g>
+
+  <!-- ═══ LINGKARAN DEKORATIF OUTLINE ═══ -->
+  <!-- Kanan atas -->
+  <circle cx="1860" cy="60" r="120" stroke="#a8c8ff" stroke-width="1"
+          fill="none" opacity="0.20"/>
+  <circle cx="1860" cy="60" r="80" stroke="#c5deff" stroke-width="0.8"
+          fill="none" opacity="0.15"/>
+  <circle cx="1860" cy="60" r="200" stroke="#daeaff" stroke-width="1.5"
+          fill="none" opacity="0.12"/>
+
+  <!-- Kiri bawah -->
+  <circle cx="60" cy="1020" r="120" stroke="#a8c8ff" stroke-width="1"
+          fill="none" opacity="0.20"/>
+  <circle cx="60" cy="1020" r="80" stroke="#c5deff" stroke-width="0.8"
+          fill="none" opacity="0.15"/>
+  <circle cx="60" cy="1020" r="200" stroke="#daeaff" stroke-width="1.5"
+          fill="none" opacity="0.12"/>
+
+  <!-- ═══ AKSEN GARIS HALUS ═══ -->
+  <!-- Kanan atas diagonal -->
+  <line x1="1400" y1="0" x2="1920" y2="320" stroke="#c5deff"
+        stroke-width="0.8" opacity="0.20"/>
+  <line x1="1500" y1="0" x2="1920" y2="380" stroke="#daeaff"
+        stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Kiri bawah diagonal -->
+  <line x1="0" y1="760" x2="460" y2="1080" stroke="#c5deff"
+        stroke-width="0.8" opacity="0.20"/>
+  <line x1="0" y1="700" x2="400" y2="1080" stroke="#daeaff"
+        stroke-width="0.5" opacity="0.15"/>
+
+  <!-- ═══ CAHAYA TENGAH (jaga area bersih) ═══ -->
+  <rect width="1920" height="1080" fill="url(#glowCenter)"/>
+</svg>
