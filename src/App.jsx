@@ -382,7 +382,7 @@ export default function App() {
 
 I enjoy learning new things, exploring creative ideas, and turning them into something useful. I'm passionate about building websites that are visually appealing, responsive, and easy to use. For me, every project is an opportunity to gain experience, improve my skills, and keep growing.
           </p>
-          <a href="/cv-ragil-suanda.pdf" download className="btn-download-cv">
+          <a href="images/cvragilsuanda.pdf" download className="btn-download-cv">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
